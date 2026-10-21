@@ -452,7 +452,7 @@ section {
     padding: 32px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     overflow: hidden;
     border-radius: 20px;
     background: linear-gradient(
@@ -482,12 +482,11 @@ section {
 }
 
 .project-number {
-    position: absolute;
-    top: 25px;
-    left: 30px;
     color: rgba(255,255,255,.15);
     font-size: 55px;
     font-weight: 800;
+    line-height: 1;
+    margin-bottom: 18px;
 }
 
 .project-card h3 {
@@ -522,7 +521,8 @@ section {
 }
 
 .project-actions {
-    margin-top: 22px;
+    margin-top: auto;
+    padding-top: 22px;
     z-index: 2;
 }
 
@@ -1426,6 +1426,28 @@ JAN 2026 — JUN 2026
 <li>Optimized SQL queries supporting transaction processing, reconciliation, validation and exception analysis.</li>
 <li>Developed and integrated REST APIs for reliable data exchange.</li>
 <li>Implemented business logic, exception handling and troubleshooting for backend processing workflows.</li>
+</ul>
+
+</div>
+
+
+<div class="experience">
+
+<div class="timeline-dot"></div>
+
+<div class="experience-date">
+OCT 2024 — NOV 2025
+</div>
+
+<h3>Information Technology Support Specialist</h3>
+
+<div class="company">Panda Restaurant Group (Panda Express) • Part-time • Charlotte, NC</div>
+
+<ul>
+<li>Supported business applications and troubleshot software and POS system issues.</li>
+<li>Assisted with invoice processing, data verification and maintaining accurate digital records.</li>
+<li>Developed a Python-based shift-scheduling website that automatically assigns employee shifts based on staff availability.</li>
+<li>Collaborated with management to identify operational challenges and develop technology-driven solutions.</li>
 </ul>
 
 </div>
@@ -2708,7 +2730,7 @@ skills:
 `Sahasra's technical skills include Python, SQL, JavaScript, Django, Node.js, REST APIs, PyTest, MS SQL Server, MySQL, MongoDB, SQLite, Pandas, NumPy, Scikit-learn, Microsoft Azure, Azure DevOps, GitHub Actions, React.js, Wireshark and Burp Suite.`,
 
 experience:
-`Sahasra has professional software development experience at Charles River and AlcoveX Product Studio.
+`Sahasra has professional software development experience at Charles River and AlcoveX Product Studio, and worked as an Information Technology Support Specialist at Panda Restaurant Group (Panda Express) in Charlotte, NC from October 2024 to November 2025, where she supported POS and business systems, assisted with invoice processing and built a Python shift-scheduling website.
 
 Her experience includes Python backend development, REST APIs, Pandas, SQL, automated API testing, PyTest, debugging and Agile development.`,
 
@@ -2968,7 +2990,9 @@ function generateAnswer(question) {
     if (
         q.includes("experience") ||
         q.includes("charles river") ||
-        q.includes("alcovex")
+        q.includes("alcovex") ||
+        q.includes("panda express") ||
+        q.includes("panda restaurant")
     ) {
         return sahasraKnowledge.experience;
     }
