@@ -1716,6 +1716,135 @@ MAY 2023 — JUL 2023
         </div>
 
 
+        <!-- =========================
+             PROJECT 06 — SMART SCHEDULER
+        ========================== -->
+
+        <div class="project-card">
+
+            <div class="project-number">06</div>
+
+            <h3>Smart Shift Scheduler</h3>
+
+            <p>
+                A Django web application that automatically builds fair weekly
+                employee schedules from submitted availability. The scheduling
+                engine fills the hardest shifts first, enforces hour limits and
+                prevents double-booking, while managers can publish schedules
+                and approve shift swaps.
+            </p>
+
+            <div class="tech-tags">
+                <span>Python</span>
+                <span>Django</span>
+                <span>Django REST Framework</span>
+                <span>PostgreSQL</span>
+                <span>JavaScript</span>
+                <span>Docker</span>
+            </div>
+
+            <div class="project-actions">
+
+                <a
+                    href="https://github.com/sahasra24/SmartScheduler"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    View GitHub Repository ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PROJECT 07 — AI INVOICE PROCESSING
+        ========================== -->
+
+        <div class="project-card">
+
+            <div class="project-number">07</div>
+
+            <h3>AI-Powered Invoice Processing &amp; ERP Integration</h3>
+
+            <p>
+                A 3-layer API-led integration in MuleSoft Mule 4 that automates
+                invoice processing from PDF/image upload to ERP posting, using AI
+                extraction with confidence scoring and human review. Vendor
+                verification, duplicate detection, purchase-order matching and
+                amount-based approval routing are implemented in 12 DataWeave scripts.
+            </p>
+
+            <div class="tech-tags">
+                <span>MuleSoft Mule 4</span>
+                <span>DataWeave 2.0</span>
+                <span>MySQL</span>
+                <span>API-Led Connectivity</span>
+                <span>MUnit</span>
+            </div>
+
+            <div class="project-actions">
+
+                <a
+                    href="https://github.com/sahasra24/ai-invoice-processing-mulesoft"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    View GitHub Repository ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PROJECT 08 — AUTOHEAL
+        ========================== -->
+
+        <div class="project-card">
+
+            <div class="project-number">08</div>
+
+            <h3>AutoHeal – Kubernetes Self-Healing Microservices Platform</h3>
+
+            <p>
+                A cloud-native platform of three FastAPI microservices that detects
+                failures, recovers automatically and scales with load. A guarded
+                failure-injection API crashes pods and leaks memory, while probes,
+                ReplicaSets and HPAs heal the system, monitored through Prometheus
+                and Grafana and deployed to AWS EKS via GitHub Actions.
+            </p>
+
+            <div class="tech-tags">
+                <span>Kubernetes</span>
+                <span>FastAPI</span>
+                <span>Docker</span>
+                <span>Helm</span>
+                <span>Prometheus</span>
+                <span>Grafana</span>
+                <span>AWS EKS</span>
+            </div>
+
+            <div class="project-actions">
+
+                <a
+                    href="https://github.com/sahasra24/autoheal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    View GitHub Repository ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
     </div>
     <!-- END PROJECTS GRID -->
 
@@ -2591,8 +2720,11 @@ projects:
 3. LogLens — Application Log Analytics System
 4. SOC Threat Monitoring Dashboard
 5. AI Prompt Injection Detection System
+6. Smart Shift Scheduler
+7. AI-Powered Invoice Processing & ERP Integration
+8. AutoHeal — Kubernetes Self-Healing Microservices Platform
 
-Three of these projects are available through Sahasra's GitHub profile.`,
+All of these projects are available through Sahasra's GitHub profile.`,
 
 certifications:
 `Sahasra's certifications and achievements include:
@@ -2608,6 +2740,21 @@ loglens:
 `LogLens is an application log analytics system built using Python, Django, Pandas, SQL and SQLite.
 
 It detects ERROR, CRITICAL and WARNING events and identifies abnormal patterns in application logs.`,
+
+scheduler:
+`Smart Shift Scheduler is a Django web application built with Python, Django REST Framework, PostgreSQL and JavaScript.
+
+It automatically builds fair weekly employee schedules from staff availability, respecting hour limits, preventing double-booking and supporting manager-approved shift swaps.`,
+
+invoice:
+`Sahasra designed an AI-Powered Invoice Processing & ERP Integration using MuleSoft Mule 4, DataWeave 2.0 and MySQL.
+
+It is a 3-layer API-led integration that automates invoices from PDF/image upload to ERP posting, with AI extraction, confidence scoring, human review, vendor verification, duplicate detection, purchase-order matching and approval routing.`,
+
+autoheal:
+`AutoHeal is a Kubernetes self-healing microservices platform built with FastAPI, Docker, Helm, Prometheus and Grafana.
+
+Its three microservices detect failures, recover automatically and scale with load, with failure-injection experiments and GitHub Actions CI/CD to AWS EKS.`,
 
 soc:
 `Sahasra built a SOC Threat Monitoring Dashboard using Splunk Enterprise.
@@ -2761,6 +2908,35 @@ function generateAnswer(question) {
         q.includes("log analytics")
     ) {
         return sahasraKnowledge.loglens;
+    }
+
+
+    if (
+        q.includes("scheduler") ||
+        q.includes("schedular") ||
+        q.includes("shift")
+    ) {
+        return sahasraKnowledge.scheduler;
+    }
+
+
+    if (
+        q.includes("invoice") ||
+        q.includes("mulesoft") ||
+        q.includes("erp") ||
+        q.includes("dataweave")
+    ) {
+        return sahasraKnowledge.invoice;
+    }
+
+
+    if (
+        q.includes("autoheal") ||
+        q.includes("kubernetes") ||
+        q.includes("self-healing") ||
+        q.includes("self healing")
+    ) {
+        return sahasraKnowledge.autoheal;
     }
 
 
